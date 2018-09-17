@@ -1,4 +1,4 @@
-""" Largest product in a series (numpy) """
+""" Largest product in a series  """
 
 
 def slice_prod(slc):
@@ -14,10 +14,13 @@ with open('data.txt') as file:
     data = [int(n) for n in str_data.replace('\n', '')]
 
 
-max_slice_prod = slice_prod(data[:13])  # Initial max
+slice_size = 13
 
-for n in range(len(data)-13):
-    cur_slice_prod = slice_prod(data[n:n+13])
+
+max_slice_prod = slice_prod(data[:slice_size])  # Initial max
+
+for n in range(len(data)-slice_size):
+    cur_slice_prod = slice_prod(data[n:n+slice_size])
     if cur_slice_prod > max_slice_prod:
         max_slice_prod = cur_slice_prod
 
