@@ -1,7 +1,8 @@
 """ Longest Collatz sequence """
 
+
 def collatz_gen(n):
-    """ 
+    """
         takes number 'start' and returns next number in sequence
         up to and including 1.
     """
@@ -11,7 +12,7 @@ def collatz_gen(n):
         else:
             n = 3*n + 1
         yield n
-        
+
 number = 0
 longest = 0
 for n in range(1, 1_000_000):
@@ -19,7 +20,7 @@ for n in range(1, 1_000_000):
     len_seq = 1
     while True:
         try:
-            next(collatz) 
+            next(collatz)
         except StopIteration:
             break
         else:
@@ -27,7 +28,5 @@ for n in range(1, 1_000_000):
     if len_seq > longest:
         number = n
         longest = len_seq
-    
-print(f'{number} is the number with the longest sequence of {longest} terms')
 
-            
+print(f'{number} is the number with the longest sequence of {longest} terms')
