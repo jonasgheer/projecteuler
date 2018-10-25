@@ -7,7 +7,7 @@ def is_pal(n):
     else:
         return False
 
-def lpp(n_d=3):
+def largest_palindrome_product(n_d=3):
     """ 
         Find largest palindrome product 
         n_d : number of digits 
@@ -21,4 +21,4 @@ def lpp(n_d=3):
 
     return max(palindromes)
     
-print('Largest palindrome product:', lpp())
+print('Largest palindrome product:', largest_palindrome_product())
